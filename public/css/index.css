@@ -1,0 +1,27 @@
+.card {
+    width: 75%;
+    height: 25%;
+    border: 1px solid black;
+    margin: auto;
+    display: grid;
+}
+
+.card-image img {
+   display: block;
+    width: 100%;
+    height: 15%;
+    margin: auto;
+    /* try to center the image */
+    justify-content: center;
+}
+
+h1{
+   text-align: center;
+}
+
+@media screen and (min-width: 1300px) {
+
+    .card-image img{
+        width: 75%;
+    }
+}

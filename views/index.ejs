@@ -1,0 +1,35 @@
+<%- include('includes/head.ejs') %>
+<link rel="stylesheet" href="/css/index.css">
+
+<body>
+    <%- include('includes/nav.ejs') %>
+    <main>
+        <% if(myPosts.length > 0) { %>
+        <h1>Blog Posts</h1>
+        <div class="grid">
+            <% for (let posts of myPosts){ %>
+            <article class="card product-item">
+                <div class="card-image">
+                    <img src="https://picsum.photos/700/300" alt="blog image">
+                </div>
+                <header class="card-header">
+                    <h1 class="blog-title"><%= posts.title %> </h1>
+                </header>
+                <div class="card-content">
+                    <!-- a date element could be added in here -->
+                    <p class="blog-body">A very interesting book about so many even more interesting things!
+                    </p>
+                </div>
+                <div class="card-actions">
+                    <!-- add a read more button in here -->
+                </div>
+            </article>
+            <% } %>
+        </div>
+        <% } else{ %>
+        <h1>No Products Found</h1>
+        <% } %>
+    </main>
+</body>
+
+</html>
